@@ -25,8 +25,8 @@ RUN apt-get update && apt-get install -y python-catkin-tools
 RUN mkdir -p flame_ws/src
 
 # Clone the repo into the docker container.
-RUN cd flame_ws/src && git clone git@github.com:robustrobotics/flame.git
-RUN cd flame_ws/src && git clone git@github.com:robustrobotics/flame_ros.git
+RUN cd flame_ws/src && git clone https://github.com/Mert-Eren-Karabulut/flame.git
+RUN cd flame_ws/src && git clone https://github.com/Mert-Eren-Karabulut/flame_ros.git
 
 # Initialize the workspace.
 RUN cd flame_ws && catkin init
