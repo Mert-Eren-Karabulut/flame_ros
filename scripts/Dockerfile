@@ -48,6 +48,7 @@ RUN echo "source /flame_ws/devel/setup.bash" >> ~/.bashrc
 
 # Download and extract EuRoC dataset.
 RUN wget http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/vicon_room1/V1_01_easy/V1_01_easy.zip
+RUN apt-get install zip unzip
 RUN mkdir data && cd data && unzip ../V1_01_easy.zip
 
 # Edit the configuarion yaml to point to the extracted data.
